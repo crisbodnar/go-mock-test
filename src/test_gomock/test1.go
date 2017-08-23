@@ -1,4 +1,4 @@
-package first
+package test_gomock
 
 import (
 	"testing"
