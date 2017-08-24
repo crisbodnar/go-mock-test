@@ -1,4 +1,4 @@
-package test_pegomock
+package test_gomock
 
 //go:generate mockgen first Person
 
@@ -7,8 +7,3 @@ type Person interface {
 	IsOlderThan(age int) bool
 }
 
-type Alien struct {}
-
-func (a *Alien) isPersonOlderThan(person Person, age int) bool {
-	return person.IsOlderThan(age)
-}
