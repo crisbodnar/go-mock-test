@@ -51,7 +51,8 @@ func (suite *TestSuite) TestAdvancedStubbing() {
 	RegisterMockTestingT(suite.T())
 	mockPerson := NewMockPerson()
 
-	// In pegomock you can't return values depending on the inputs in these stub callbacks.
+	// In pegomock you CAN return values depending on the inputs in these stub callbacks. 
+	// Smth along the lines of if smth > 10 {return x} else { return y }
 	// You can have more complex stubbing in pegomock.
 	When(mockPerson.IsOlderThan(20)).Then(func(params []Param) ReturnValues {
 		// Do more complicated stuff here.
